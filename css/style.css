@@ -1,0 +1,36 @@
+body {
+	padding-top: 3em;
+	background: #93cede; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #93cede 0%, #75bdd1 41%, #49a5bf 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#93cede), color-stop(41%,#75bdd1), color-stop(100%,#49a5bf)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #93cede 0%,#75bdd1 41%,#49a5bf 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #93cede 0%,#75bdd1 41%,#49a5bf 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #93cede 0%,#75bdd1 41%,#49a5bf 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #93cede 0%,#75bdd1 41%,#49a5bf 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#49a5bf',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	}
+
+.titulo {
+	padding-top: 5px;
+	font-size: 20px;
+}
+
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    text-align:left;
+    margin-right:-4px;
+}
+
+.col-fixed {
+    width:320px;
+}
+.col-min {
+    min-width:320px;
+}
+.col-max {
+    max-width:320px;
+}
