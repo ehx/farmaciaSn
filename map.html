@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="myApp">
+	<head>
+		<title>Farmacias de turno</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<meta name="author" content="Eloy Colella">
+    	<link rel="icon" href="favicon.ico">
+
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/ionicons.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body ng-controller="FarmaciaController">
+		<div class="container" style="padding-top: 10px">
+	    <div class="row row-centered">
+          <div class="col-xs-12 col-md-6 col-centered">
+            <div class="panel panel-success">
+              <div class="panel-heading">
+                <div class="btn-group pull-right" role="group">
+                  <button ng-click="modocaminar()" type="button" class="btn btn-md btn-success" ng-class="{'active': x.modo == 'WALKING'}">
+                    <span class="ion-android-walk"></span>
+                  </button>
+                  <button ng-click="modoauto()" type="button" class="btn btn-md btn-success" ng-class="{'active': x.modo == 'DRIVING'}">
+                    <span class="ion-android-car"></span>
+                  </button>
+                </div>
+                  <h1 class="panel-title titulo">Farmacias de turno</h1>
+                  <div class="clearfix"></div>
+                </div>
+              <div class="panel-body" ng-cloak>
+                <div id="map-canvas"></div>
+              </div>
+            </div>
+          </div>
+      </div>
+		</div>
+		
+		<script src="js/angular.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&sensor=true"></script>
+		<script src="js/script.js"></script>
+		
+	</body>
+</html>
