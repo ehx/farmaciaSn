@@ -1,0 +1,33 @@
+<div class="row row-centered">
+	<div class="col-xs-12 col-md-6 col-centered">
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<div class="btn-group pull-right" role="group">
+					<button ng-click="modocaminar()" type="button" class="btn btn-md btn-success" ng-class="{'active': x.modo == 'WALKING'}">
+						<span class="icon-caminar icon-md"></span>
+					</button>
+					<button ng-click="modoauto()" type="button" class="btn btn-md btn-success" ng-class="{'active': x.modo == 'DRIVING'}">
+						<span class="icon-auto icon-md"></span>
+					</button>
+				</div>
+				<h1 class="panel-title titulo">Farmacias de turno</h1>
+				<div class="clearfix"></div>
+			</div>
+			<div class="panel-body" ng-cloak>
+				<ul class="media-list">
+					<li class="media" ng-repeat="farmacia in farmacias | filter:{grupo:'A'}">
+						<div id="farmacias" ng-click="setFarmacia(farmacia.direccion)">
+							<div class="media-left media-middle">
+							  <span class="icon-cruz-redondo icon-large icon-verde"></span>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading"><a>{{farmacia.nombre}}</a> <small>{{farmacia.direccion}}</small></h4>
+								<div ng-distancia direccion="farmacia.direccion" modo="x.modo" ></div>
+						    </div>
+						</div>	
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,9 +1,11 @@
 angular.module('myApp.services', [])
 
 .factory('FarmaciasSrv', function(){
+  
+  var farmaciaActual = null;
     
-    var farmacias =
-	[{
+  var farmacias =
+	  [{
         "nombre": "ARMELLINI",
         "direccion": "Av. Central Y 31 Oeste",
         "grupo": "A"
@@ -14,12 +16,12 @@ angular.module('myApp.services', [])
         "grupo": "A"
     },
     {
-        "nombre": "DIAMANTE ",
+        "nombre": "DIAMANTE",
         "direccion": "Belgrano Y Alvarez",
         "grupo": "A"
     },
     {
-        "nombre": "FURLAN ",
+        "nombre": "FURLAN",
         "direccion": "9 De Julio 260",
         "grupo": "A"
     },
@@ -29,7 +31,7 @@ angular.module('myApp.services', [])
         "grupo": "A"
     },
     {
-        "nombre": "HECTOR LOPEZ ",
+        "nombre": "HECTOR LOPEZ",
         "direccion": "Maipú 749",
         "grupo": "A"
     },
@@ -89,7 +91,7 @@ angular.module('myApp.services', [])
         "grupo": "C"
     },
     {
-        "nombre": "SAN NICOLÁS",
+        "nombre": "SAN NICOLAS",
         "direccion": "Cochabamba 357",
         "grupo": "C"
     },
@@ -324,7 +326,7 @@ angular.module('myApp.services', [])
         "grupo": "K"
     },
     {
-        "nombre": "LALLO ",
+        "nombre": "LALLO",
         "direccion": "Balcarce 441",
         "grupo": "K"
     },
@@ -384,9 +386,22 @@ angular.module('myApp.services', [])
         "grupo": "L"
     }];
     
-    function farmaciaList(){
-        return farmacias;
-    }
-    
-    return { list: farmaciaList }
-})
+  function farmaciaList(){
+      return farmacias;
+  }
+  
+  function getFarmacia(){
+    return farmaciaActual;
+  }
+  
+  function setFarmacia(farmacia){
+    return farmaciaActual = farmacia;
+  }
+  
+
+  return { 
+    list: farmaciaList,
+    getFarmacia : getFarmacia,
+    setFarmacia : setFarmacia
+    };
+});
